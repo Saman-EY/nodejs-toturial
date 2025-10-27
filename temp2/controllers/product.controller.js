@@ -3,7 +3,6 @@ const productModel = require("../model/products.model");
 async function get(req, res) {
   try {
     const products = await productModel.find();
-
     res.writeHead(200, { "content-type": "application/json" });
     res.write(JSON.stringify(products));
     res.end();
@@ -45,8 +44,8 @@ async function create(req, res) {
 
     req.on("end", async () => {
       const result = await productModel.create({
-        id: Date.now(),
         ...JSON.parse(body),
+        createdAt: new Date(),
       });
 
       res.writeHead(201, { "content-type": "application/json" });
