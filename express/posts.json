@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Learning Node.js",
+    "body": "Node.js lets you run JavaScript on the server side with incredible performance.",
+    "likes": 42
+  },
+  {
+    "id": 2,
+    "title": "Understanding Express 5",
+    "body": "Express 5 introduces improved routing and better async handling.",
+    "likes": 27
+  },
+  {
+    "id": 3,
+    "title": "MongoDB Basics",
+    "body": "MongoDB is a NoSQL database that stores data in flexible JSON-like documents.",
+    "likes": 33
+  },
+  {
+    "id": 4,
+    "title": "Frontend with React",
+    "body": "React helps you build fast, interactive user interfaces using reusable components.",
+    "likes": 50
+  },
+  {
+    "id": 5,
+    "title": "Next.js for SEO",
+    "body": "Next.js enables server-side rendering and static site generation for React apps.",
+    "likes": 61
+  }
+]
