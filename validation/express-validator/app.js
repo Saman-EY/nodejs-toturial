@@ -3,6 +3,7 @@ const { ErrorHandler, NotFoundError } = require("./util/errorHandlers");
 const { loginValidator, registerValidator } = require("./validators/auth.validator");
 const { validationResult } = require("express-validator");
 const checkValidation = require("./middleware/validator");
+const IdValidator = require("./validators/param.validator");
 const app = express();
 
 app.use(express.json());
@@ -13,6 +14,9 @@ app.post("/login", loginValidator(), checkValidation, (req, res) => {
 });
 
 app.post("/register", registerValidator(), checkValidation, (req, res) => {
+  res.send(req.body);
+});
+app.get("/blogs/:id", IdValidator, checkValidation, (req, res) => {
   res.send(req.body);
 });
 
