@@ -8,7 +8,7 @@ app.use(express.urlencoded());
 
 const uploadFile = multer({ dest: "./uploads" });
 
-app.post("/upload", uploadFile, (req, res) => {
+app.post("/upload", uploadFile.single("file"), (req, res) => {
   console.log(req.file);
   res.send(req.file);
 });
