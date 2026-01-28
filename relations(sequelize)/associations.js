@@ -4,7 +4,6 @@ const { User, Profile } = require("./user");
 User.hasOne(Profile, {
   foreignKey: {
     name: "userId",
-    allowNull: false,
     unique: true,
     onDelete: "CASCADE",
   },
