@@ -13,14 +13,12 @@ app.get("/users", async (req, res) => {
   const users =  await User.findAll({
     include: [{ model: Article, as: "articles" }],
   });
-  console.log(users)
   res.json(users);
 });
 app.get("/articles", async (req, res) => {
   const articles =  await Article.findAll({
     include: [{ model: User, as: "author" }],
   });
-  console.log(articles)
   res.json(articles);
 });
 

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon node app.js"
+    "dev": "nodemon node app.js",
+    "seed": " node seed.js"
   },
   "keywords": [],
   "author": "",
@@ -13,5 +14,8 @@
     "express": "^5.2.1",
     "mysql2": "^3.17.0",
     "sequelize": "^6.37.7"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.5"
   }
 }
